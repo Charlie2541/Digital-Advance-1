@@ -58,6 +58,41 @@
 	var college = L.marker([51.129852, -2.7334955]).addTo(mymap);
 	college.bindPopup("<b>C Block</b><br>Strode College").openPopup();
 	
+        var collegeB = L.marker([51.130494, -2.7340028]).addTo(mymap);
+	collegeB.bindPopup("<b>B block</b><br>Reception").openPopup();
+	
+        var collegeD = L.marker([51.130253, -2.7339046]).addTo(mymap);
+	collegeD.bindPopup("<b>D block</b><br>Job Shop").openPopup();	
+	
+	var collegeA = L.marker([51.130350 , -2.7334379]).addTo(mymap);
+	collegeA.bindPopup("<b>A block</b><br>Learning Zone").openPopup();
+	
+	var collegeM= L.marker([51.129645 , -2.7325822]).addTo(mymap);
+	collegeM.bindPopup("<b>M block</b><br>Social Care").openPopup();
+
+	var collegeJ= L.marker([51.129502 , -2.7320538]).addTo(mymap);
+	collegeJ.bindPopup("<b>J block</b><br>A Levels").openPopup();
+	
+	var collegeE = L.marker([51.129216 , -2.7318487]).addTo(mymap);
+	collegeE.bindPopup("<b>E block</b><br>The Brasserie").openPopup();
+	
+	var collegeM= L.marker([51.129645 , -2.7325822]).addTo(mymap);
+	collegeM.bindPopup("<b>M block</b><br>Social Care").openPopup();
+	
+	var collegeT= L.marker([51.130470 , -2.7329819]).addTo(mymap);
+	collegeT.bindPopup("<b>Strode Theatre</b><br>Strode College").openPopup();	
+	
+	function onMapClick(e) {
+		popup
+			.setLatLng(e.latlng)
+			.setContent("You clicked the map at " + e.latlng.toString())
+			.openOn(mymap);
+	}
+
+	mymap.on('click', onMapClick);
+	mymap.addControl(new L.Control.Fullscreen());
+	//L.control.mousePosition().addTo(mymap);
+	
 	//var college1 = L.marker([51.129952, -2.7334955]).addTo(mymap);
       
 	var baseMaps = {
